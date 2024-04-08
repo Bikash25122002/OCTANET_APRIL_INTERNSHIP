@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing page</title>
+    <style type="text/css">
+        *{
+            padding: 0;
+            margin: 0; 
+            box-sizing: border-box;
+        }
+        header{
+            width: 100%;
+            height: 100vh;
+            background:linear-gradient(rgba(0, 0, 0, 0.8),rgba(0,0,0,0.2)), url('tavel1.jpg') ;
+            background-color: cover;
+            
+        }
+        nav{
+            width: 100%;
+            height: 100px;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .logo{
+            font-size: 2cm;
+            letter-spacing: 2px;
+        }
+        .menu a{
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            font-size:20px;
+            position: relative;
+
+        }
+        .menu a:before{
+            content: '';
+            position: absolute;
+            top:0;
+            left:0;
+            width: 0%;
+            height:100%;
+            border-bottom: 2px solid indianred;
+            transition: 0.4s linear;
+
+        
+        }
+        
+        .menu a:hover:before{
+             width: 90%;
+        }
+        .register a{
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            font-size:20px;
+            background-color: indianred;
+            border-radius: 8px;
+            transition: 0.4s;
+
+        }
+        .register a:hover{
+             background: transparent;
+             border: 1px solid indianred;
+        }
+            .bikash{
+                max-width: 650px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                text-align: left;
+                color: rgb(255, 255, 255);
+            }
+            .bikash span{
+                letter-spacing: 5px;
+
+            }
+            .bikash h1{
+                font-size: 3.5em;
+                
+            }
+            .bikash a{
+                text-decoration: none;
+                background-color: indianred;
+                color: white;
+                padding: 10px 20px;
+                letter-spacing: 5px;
+            }
+            .bikash a:hover{
+             background: transparent;
+             border: 1px solid indianred;
+        }
+
+        input[type='text'],input[type='email'],input[type='tel'],textarea{
+	width: 100%;
+	padding: 10px 0 10px 6px;
+	border-radius: 3px;
+	border: 1px solid #ccc;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+input[type='text']:focus,input[type='email']:focus,input[type='tel']:focus,select:focus,textarea:focus{
+	border: 1px solid #5db6db;
+	box-shadow: 0 0 10px #b9eaff;
+	outline: none !important;
+}
+input[type='submit']{
+	background: rgb(39,160,210);
+	color: #fff;
+	border: none;
+	padding: 10px 20px;
+	cursor: pointer;
+}
+.main-feedback-form{
+
+	max-width: 150px;
+    max-height: 500px;
+	margin: 0 auto;
+	background: #e9e9e9;
+	padding: 15px 35px 15px 20px;
+	border-radius: 3px;
+    font-size: smaller;
+    position: bottom;
+    bottom: 100;
+    left: 0;
+    width: 100;
+    display: flexbox;
+    margin-bottom: 10px;
+    box-sizing:content-box;
+    overflow: hidden;
+    cursor: pointer;
+    background: transparent;
+    background: rgba(0,0,0,0.2);
+    float: right;
+    
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Go!</div>
+           
+            <div class="menu">
+            <a href="#">Home</a>
+            <a href="#">Country</a>
+            <a href="#">Choose Way</a>
+            <a href="#">Bestoffer</a>
+            <a href="#">oursites</a>
+            <a href="">contact</a>
+            </div>
+            <div class="register">
+                <a href="#">Register</a>
+                <a href="">login</a>
+            </div>
+        </nav>
+        <section class="bikash">
+            <span>Hurry Up!</span>
+            <h1>Book For Travel</h1>
+            <br>
+            <a href="#">Plan Your Trips</a>
+        </section>
+       <section>
+        <div class="main-feedback-form">
+            <form action="#" method="POST">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" class="name" placeholder="Your name" required>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" class="email" placeholder="Your email" required>
+            <label for="tel">Phone Number</label>
+            <input type="tel" name="tel" class="tel" maxlength="10" id="tel" placeholder="Your phone number" required>
+            <label for="Email">Feedback Type</label><br>
+            <input type="radio" id="comments" name="feedback_type" value="Comments">
+            <label for="comments">Comments</label>
+            <input type="radio" id="suggestions" name="feedback_type" value="Suggestions">
+            <label for="suggestions">Suggestions</label>
+            <input type="radio" id="questions" name="feedback_type" value="Questions">
+            <label for="questions">Questions</label><br><br>
+            <label for="description_feedback">Description of your Feedback:</label>
+            <textarea name="description_feedback" id="description_feedback" placeholder="Please describe your feedback here" rows="5" required></textarea>
+            <input name="submit" type="submit" value="Submit">
+            </form>
+            </div>
+
+        </section>
+    </header>
+
+    
+</body>
+</html>
